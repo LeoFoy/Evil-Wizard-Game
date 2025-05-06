@@ -1,0 +1,7 @@
+To run this project on your own machine you must:
+
+- download Godot 4
+- download project files from github
+- within the godot project manager, import the project file folder
+- once inside the godot editor, you can press play in the top right to run the application
+- if prompted, select Menu.tscn as your main or start scene
