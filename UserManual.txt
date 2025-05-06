@@ -1,5 +1,5 @@
 -----SETUP--------
-- Upon downloading the zipped files, extract them. 
+- Upon downloading the zipped files from itch.io, extract them. 
 - Make sure all files stay together in one folder.
 - Double click the .exe file to start the game.
 
