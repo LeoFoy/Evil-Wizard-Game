@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://5jo2jfdu48k6"]
+
+[ext_resource type="Script" path="res://Wizard/Spells/fire_ring.gd" id="1_cjrhf"]
+[ext_resource type="Texture2D" uid="uid://o0xokujfju3t" path="res://Sprites/FireRingSprite.png" id="2_kd2ka"]
+[ext_resource type="Script" path="res://Wizard/Spells/fire_ring_collision.gd" id="3_q7ls7"]
+[ext_resource type="AudioStream" uid="uid://bonnowaicjahd" path="res://SFX/fireball.wav" id="4_lym84"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbwss"]
+radius = 8.94427
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5x1vj"]
+radius = 95.0053
+
+[node name="FireRing" type="Node2D"]
+script = ExtResource("1_cjrhf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, -3.8147e-06)
+scale = Vector2(2.90625, 2.90625)
+texture = ExtResource("2_kd2ka")
+
+[node name="FireRingCollision" type="Area2D" parent="."]
+script = ExtResource("3_q7ls7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireRingCollision"]
+shape = SubResource("CircleShape2D_qbwss")
+
+[node name="ExplosionSound" type="AudioStreamPlayer" parent="FireRingCollision"]
+stream = ExtResource("4_lym84")
+volume_db = -10.0
+
+[node name="ExplosionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionRadius"]
+shape = SubResource("CircleShape2D_5x1vj")
+
+[connection signal="finished" from="FireRingCollision/ExplosionSound" to="FireRingCollision" method="_on_explosion_sound_finished"]

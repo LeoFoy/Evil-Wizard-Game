@@ -1,0 +1,205 @@
+[gd_scene load_steps=40 format=3 uid="uid://dpi0bgr2e6r8g"]
+
+[ext_resource type="Script" path="res://Scenes/level_selection.gd" id="1_ud2pq"]
+[ext_resource type="Texture2D" uid="uid://6fikuhyilwk2" path="res://User Interface/NoneDoomed.png" id="2_8t2bo"]
+[ext_resource type="AudioStream" uid="uid://rajsm2mbdjp8" path="res://SFX/LevelEnter.wav" id="3_fn5yy"]
+[ext_resource type="AudioStream" uid="uid://r2dftvkqs0rg" path="res://SFX/Track 47.wav" id="4_74a0c"]
+[ext_resource type="Texture2D" uid="uid://cc2gooc26oeb6" path="res://User Interface/Level_Complete.png" id="5_sfxe2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hi4w5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv5xm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mra1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1i1oc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_td0ur"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7o2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nayel"]
+bg_color = Color(0.55, 0.55, 0.55, 0.333333)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kihsl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_88e6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66wvp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n2v0w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rx8c3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fx787"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1n7a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32xij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7hl8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ydfl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6lnf"]
+bg_color = Color(0.54902, 0.54902, 0.54902, 0.333333)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0g4h0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w8sho"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yrgp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8itn7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5x84e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_luagq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m16hq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iedip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkvyc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e8ohp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrkkp"]
+bg_color = Color(0.54902, 0.54902, 0.54902, 0.32549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_llyl1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1ovv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mg4a5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhxc3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7arh"]
+bg_color = Color(0.54902, 0.54902, 0.54902, 0.32549)
+
+[node name="LevelSelectScreen" type="Node2D"]
+script = ExtResource("1_ud2pq")
+
+[node name="Map" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="MapState" type="Sprite2D" parent="Map"]
+position = Vector2(576, 324)
+scale = Vector2(2.14926, 2.07692)
+texture = ExtResource("2_8t2bo")
+
+[node name="Plains_Button" type="Button" parent="."]
+offset_left = 720.0
+offset_top = 408.0
+offset_right = 800.0
+offset_bottom = 520.0
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi4w5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jv5xm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mra1t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1i1oc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_td0ur")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_y7o2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nayel")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_kihsl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88e6x")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_66wvp")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n2v0w")
+
+[node name="Desert_Button" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 488.0
+offset_right = 248.0
+offset_bottom = 608.0
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rx8c3")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fx787")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n1n7a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_32xij")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u7hl8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1ydfl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x6lnf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0g4h0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w8sho")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3yrgp")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8itn7")
+
+[node name="Tundra_Button" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 40.0
+offset_right = 832.0
+offset_bottom = 160.0
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5x84e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_luagq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m16hq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_iedip")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pkvyc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e8ohp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wrkkp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_llyl1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w1ovv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_mg4a5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fhxc3")
+
+[node name="Forest_Button" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 192.0
+offset_right = 384.0
+offset_bottom = 312.0
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5x84e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_luagq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m16hq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_iedip")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pkvyc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e8ohp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y7arh")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_llyl1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w1ovv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_mg4a5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fhxc3")
+
+[node name="EnterLevelSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fn5yy")
+volume_db = -10.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_74a0c")
+volume_db = -10.0
+
+[node name="Plains_Level_Complete" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(760, 448)
+rotation = -0.375246
+scale = Vector2(0.322785, 0.322785)
+texture = ExtResource("5_sfxe2")
+
+[node name="Tundra_Level_Complete" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(792, 104)
+rotation = -0.0942478
+scale = Vector2(0.322785, 0.322785)
+texture = ExtResource("5_sfxe2")
+
+[node name="Forest_Level_Complete" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(352, 216)
+rotation = 0.18675
+scale = Vector2(0.322785, 0.322785)
+texture = ExtResource("5_sfxe2")
+
+[node name="Desert_Level_Complete" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(208, 536)
+rotation = 0.0942478
+scale = Vector2(0.322785, 0.322785)
+texture = ExtResource("5_sfxe2")
+
+[connection signal="pressed" from="Plains_Button" to="." method="_on_plains_button_pressed"]
+[connection signal="pressed" from="Desert_Button" to="." method="_on_desert_button_pressed"]
+[connection signal="pressed" from="Tundra_Button" to="." method="_on_tundra_button_pressed"]
+[connection signal="pressed" from="Forest_Button" to="." method="_on_forest_button_pressed"]
+[connection signal="finished" from="EnterLevelSFX" to="." method="_on_enter_level_sfx_finished"]

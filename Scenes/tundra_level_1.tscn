@@ -1,0 +1,203 @@
+[gd_scene load_steps=21 format=4 uid="uid://3n6s22f1p607"]
+
+[ext_resource type="Script" path="res://Scenes/tundra_level_1.gd" id="1_0lkhj"]
+[ext_resource type="Texture2D" uid="uid://4iv3p7lbwaal" path="res://TileSets/TundraTileSet.png" id="1_kjinw"]
+[ext_resource type="Texture2D" uid="uid://b1uirvdxostxc" path="res://TileSets/StonePath_Tileset_tundra.png" id="2_ai1hg"]
+[ext_resource type="PackedScene" uid="uid://xciox06u7yjv" path="res://Wizard/player.tscn" id="3_i1i6r"]
+[ext_resource type="Texture2D" uid="uid://tqdibdq7q0vu" path="res://User Interface/MinionTrayNewColors.png" id="4_7htmx"]
+[ext_resource type="Texture2D" uid="uid://clrxo3gu4a2ug" path="res://Sprites/Skeleton1.png" id="6_mxfa5"]
+[ext_resource type="Texture2D" uid="uid://bleusyapoiyo1" path="res://Sprites/Fireball_spell.png" id="7_xt2pc"]
+[ext_resource type="Texture2D" uid="uid://wf3apd3da6yc" path="res://User Interface/StartWaveButton.png" id="8_vjkfj"]
+[ext_resource type="Texture2D" uid="uid://bd20l3e42hsd3" path="res://User Interface/PauseButton.png" id="9_qt3pf"]
+[ext_resource type="AudioStream" uid="uid://1a0sj3ypehn2" path="res://SFX/victoryFX.wav" id="10_vhybd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oa8ru"]
+texture = ExtResource("1_kjinw")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uiyv2"]
+texture = ExtResource("2_ai1hg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u41wm"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_oa8ru")
+sources/1 = SubResource("TileSetAtlasSource_uiyv2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjg8v"]
+size = Vector2(192, 369)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qeqdl"]
+size = Vector2(576, 176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r0ds"]
+size = Vector2(216, 704)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v7re"]
+size = Vector2(50, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i52ql"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_0pdrb"]
+font_size = 50
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_bey1a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 544, -40, 0, 0, 0, 0, 544, 104, 0, 0, 0, 0, 544, 160, 0, 0, 0, 0, 288, 160, 0, 0, 0, 0, 288, 288, 0, 0, 0, 0, 800, 288, 0, 0, 0, 0, 800, 160, 0, 0, 0, 0, 544, 160, 0, 0, 0, 0, 544, 416, 0, 0, 0, 0, 288, 416, 0, 0, 0, 0, 288, 480, 0, 0, 0, 0, 736, 480, 0, 0, 0, 0, 736, 744)
+}
+point_count = 13
+
+[node name="tundra_level_1" type="Node2D"]
+script = ExtResource("1_0lkhj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAABAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAABAAoAAAAAAAAAAAACAAoAAAAAAAEAAAADAAoAAAAAAAEAAAAEAAoAAAAAAAEAAAAFAAoAAAAAAAEAAAAGAAoAAAAAAAEAAAAHAAoAAAAAAAEAAAAIAAoAAAAAAAEAAAAJAAoAAAABAAAAAAAKAAoAAAAAAAEAAAALAAoAAQACAAEAAAAMAAoAAAAAAAEAAAANAAoAAAAAAAEAAAAOAAoAAAAAAAEAAAAPAAoAAAAAAAEAAAAQAAoAAAAAAAEAAAARAAoAAAAAAAEAAAARAAkAAAAAAAEAAAARAAgAAAAAAAEAAAARAAcAAAAAAAEAAAARAAYAAAAAAAEAAAARAAUAAAAAAAEAAAARAAQAAAAAAAEAAAARAAMAAAAAAAEAAAARAAIAAAAAAAEAAAARAAEAAAABAAEAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAEAAAAOAAAAAAAAAAEAAAANAAAAAAAAAAEAAAAMAAAAAAAAAAEAAAALAAAAAAAAAAEAAAAKAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAIAAAAAQAAAAEAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAEAAAAFAAAAAAAAAAEAAAAEAAAAAAAAAAEAAAADAAAAAAAAAAEAAAACAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAEAAAAEAAEAAAAAAAEAAAAFAAEAAAAAAAEAAAAGAAEAAAAAAAEAAAAHAAEAAAAAAAAAAAAIAAEAAQAAAAEAAAAJAAEAAAAAAAEAAAAKAAEAAAAAAAEAAAALAAEAAAAAAAEAAAAMAAEAAAABAAAAAAANAAEAAAAAAAEAAAAOAAEAAAAAAAEAAAAPAAEAAAAAAAEAAAAQAAEAAAAAAAEAAAAQAAIAAAAAAAEAAAAPAAIAAAAAAAEAAAAOAAIAAAAAAAEAAAANAAIAAAABAAAAAAAMAAIAAQACAAAAAAALAAIAAQABAAAAAAAKAAIAAQABAAAAAAAJAAIAAQABAAAAAAAIAAIAAQABAAEAAAAHAAIAAQABAAAAAAAGAAIAAQABAAAAAAAFAAIAAQABAAAAAAAEAAIAAQAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAAAAAEAAAABAAMAAAAAAAEAAAACAAMAAAAAAAEAAAADAAMAAAAAAAAAAAAEAAMAAQAAAAEAAAAFAAMAAAAAAAEAAAAGAAMAAAABAAAAAAAHAAMAAAAAAAEAAAAIAAMAAQAAAAEAAAAJAAMAAAAAAAEAAAAKAAMAAAAAAAEAAAALAAMAAAAAAAEAAAAMAAMAAQACAAEAAAANAAMAAAAAAAAAAAAOAAMAAAAAAAEAAAAPAAMAAAAAAAEAAAAQAAMAAAAAAAEAAAAQAAQAAAAAAAEAAAAPAAQAAAAAAAAAAAAOAAQAAAAAAAAAAAANAAQAAAAAAAAAAAAMAAQAAQACAAIAAAALAAQAAQABAAIAAAAKAAQAAQABAAIAAAAJAAQAAQABAAIAAAAIAAQAAQABAAEAAAAHAAQAAQABAAIAAAAGAAQAAQABAAIAAAAFAAQAAQABAAIAAAAEAAQAAQAAAAIAAAADAAQAAAAAAAEAAAACAAQAAAAAAAEAAAABAAQAAAAAAAEAAAABAAUAAAAAAAEAAAACAAUAAAAAAAEAAAADAAUAAAAAAAEAAAAEAAUAAAAAAAEAAAAFAAUAAAAAAAEAAAAGAAUAAAAAAAEAAAAHAAUAAAAAAAEAAAAIAAUAAQAAAAEAAAAJAAUAAAAAAAEAAAAKAAUAAAAAAAEAAAALAAUAAAAAAAEAAAAMAAUAAAABAAAAAAANAAUAAAAAAAEAAAAOAAUAAAAAAAEAAAAPAAUAAAAAAAAAAAAQAAUAAAAAAAEAAAAQAAYAAAAAAAEAAAAQAAcAAAAAAAEAAAAPAAcAAAAAAAEAAAAOAAcAAAAAAAEAAAANAAcAAAAAAAEAAAAMAAcAAAAAAAEAAAALAAYAAAAAAAEAAAAKAAYAAAAAAAEAAAAJAAYAAAAAAAEAAAAIAAYAAQACAAIAAAAHAAYAAQABAAAAAAAGAAYAAQABAAAAAAAFAAYAAQABAAAAAAAEAAYAAQAAAAAAAAADAAYAAAABAAEAAAACAAYAAAAAAAEAAAABAAYAAAABAAAAAAABAAcAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAAAAAEAAAAEAAcAAQAAAAIAAAAFAAcAAQABAAAAAAAMAAYAAAAAAAEAAAANAAYAAAABAAAAAAAOAAYAAAAAAAEAAAAPAAYAAAAAAAEAAAAJAAcAAQABAAAAAAAIAAcAAQABAAAAAAAHAAcAAQABAAAAAAAGAAcAAQABAAAAAAAKAAcAAQABAAAAAAALAAcAAQACAAAAAAAIAAgAAAAAAAEAAAAHAAgAAAAAAAEAAAAGAAgAAAAAAAEAAAAFAAgAAAAAAAEAAAAEAAgAAAAAAAEAAAADAAgAAAAAAAEAAAACAAgAAAAAAAEAAAABAAgAAAAAAAEAAAABAAkAAAAAAAEAAAACAAkAAAAAAAEAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAEAAAAFAAkAAAABAAEAAAAGAAkAAAAAAAEAAAAJAAgAAAAAAAEAAAAKAAgAAAAAAAEAAAAHAAkAAAAAAAEAAAAIAAkAAAABAAAAAAAJAAkAAAABAAAAAAAKAAkAAAAAAAEAAAALAAkAAQACAAEAAAAMAAkAAAAAAAEAAAAMAAgAAAAAAAEAAAANAAgAAAAAAAEAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAEAAAALAAgAAQACAAEAAAANAAkAAAABAAEAAAAOAAkAAAAAAAEAAAAPAAkAAAAAAAEAAAAQAAgAAAAAAAEAAAAQAAkAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_u41wm")
+
+[node name="Player" parent="." instance=ExtResource("3_i1i6r")]
+
+[node name="MinionTray" type="Sprite2D" parent="."]
+position = Vector2(1046.5, 351.667)
+scale = Vector2(1.09896, 1.09896)
+texture = ExtResource("4_7htmx")
+
+[node name="PathArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea"]
+polygon = PackedVector2Array(760, 704, 760, 456, 568, 456, 568, 312, 824, 312, 824, 136, 776, 136, 776, 264, 568, 264, 568, 184, 776, 184, 776, 136, 568, 136, 568, 0, 520, 0, 520, 136, 264, 136, 264, 312, 519, 312, 519, 264, 312, 264, 312, 184, 520, 184, 520, 392, 264, 392, 264, 504, 712, 504, 712, 704)
+
+[node name="SpellCast" type="Node2D" parent="."]
+position = Vector2(96, 184)
+
+[node name="Marker2D" type="Marker2D" parent="SpellCast"]
+
+[node name="TowerUIArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TowerUIArea"]
+position = Vector2(96, 343.5)
+shape = SubResource("RectangleShape2D_rjg8v")
+
+[node name="SpellUIArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpellUIArea"]
+position = Vector2(288, 616)
+shape = SubResource("RectangleShape2D_qeqdl")
+
+[node name="MinionUIArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MinionUIArea"]
+position = Vector2(1044, 352)
+shape = SubResource("RectangleShape2D_3r0ds")
+
+[node name="HeroGoal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeroGoal"]
+position = Vector2(736, 712)
+shape = SubResource("RectangleShape2D_2v7re")
+debug_color = Color(0.828281, 0, 0.0414767, 0.42)
+
+[node name="SkeletonButton" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 88.0
+offset_right = 1040.0
+offset_bottom = 168.0
+focus_mode = 0
+icon = ExtResource("6_mxfa5")
+
+[node name="FireballButton" type="Button" parent="."]
+offset_left = 72.0
+offset_top = 568.0
+offset_right = 136.0
+offset_bottom = 632.0
+focus_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="FireballButton"]
+position = Vector2(32, 32)
+texture = ExtResource("7_xt2pc")
+
+[node name="StartWave" type="Button" parent="."]
+z_index = 1
+offset_left = 948.0
+offset_top = 504.0
+offset_right = 1145.0
+offset_bottom = 583.0
+focus_mode = 0
+
+[node name="StartWaveImage" type="Sprite2D" parent="StartWave"]
+position = Vector2(99, 40)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("8_vjkfj")
+
+[node name="Pause" type="Button" parent="."]
+process_mode = 3
+z_index = 1
+offset_left = 948.0
+offset_top = 590.0
+offset_right = 1146.0
+offset_bottom = 645.0
+focus_mode = 0
+toggle_mode = true
+
+[node name="PauseImage" type="Sprite2D" parent="Pause"]
+position = Vector2(98, 28)
+scale = Vector2(0.273438, 0.273438)
+texture = ExtResource("9_qt3pf")
+
+[node name="SoulCounter" type="Label" parent="."]
+offset_left = 968.0
+offset_top = 475.0
+offset_right = 1128.0
+offset_bottom = 499.0
+
+[node name="HealthCounter" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 280.0
+offset_right = 144.0
+offset_bottom = 303.0
+label_settings = SubResource("LabelSettings_i52ql")
+
+[node name="WaveNotif" type="Label" parent="."]
+z_index = 1
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 384.0
+label_settings = SubResource("LabelSettings_0pdrb")
+horizontal_alignment = 1
+
+[node name="MinionTowers" type="Node2D" parent="."]
+
+[node name="HeroPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_bey1a")
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vhybd")
+
+[node name="FailTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="HeroGoal" to="." method="_on_hero_goal_body_entered"]
+[connection signal="button_down" from="SkeletonButton" to="." method="_on_skeleton_button_button_down"]
+[connection signal="button_down" from="FireballButton" to="." method="_on_fireball_button_button_down"]
+[connection signal="pressed" from="StartWave" to="." method="_on_start_wave_pressed"]
+[connection signal="toggled" from="Pause" to="." method="_on_pause_toggled"]
+[connection signal="finished" from="VictorySound" to="." method="_on_victory_sound_finished"]
+[connection signal="timeout" from="FailTimer" to="." method="_on_fail_timer_timeout"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c17a7vpt3k3by"
+path="res://.godot/imported/Potion Effect.wav-d6329e258e2def5c713ebb8ea672a0df.sample"
+
+[deps]
+
+source_file="res://SFX/Potion Effect.wav"
+dest_files=["res://.godot/imported/Potion Effect.wav-d6329e258e2def5c713ebb8ea672a0df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

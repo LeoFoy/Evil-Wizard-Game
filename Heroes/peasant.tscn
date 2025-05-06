@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvcngmxolmoj6"]
+
+[ext_resource type="Script" path="res://Heroes/peasant.gd" id="1_44ofg"]
+[ext_resource type="Texture2D" uid="uid://bj84w4vgy0wgl" path="res://Sprites/Peasant.png" id="2_oj2u1"]
+[ext_resource type="Script" path="res://Heroes/peasant_body.gd" id="3_m2in2"]
+[ext_resource type="AudioStream" uid="uid://bhbkbhd5k17xf" path="res://SFX/hitHurt.wav" id="4_mewu5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xi3sq"]
+size = Vector2(45, 48)
+
+[node name="peasant" type="PathFollow2D"]
+rotates = false
+loop = false
+script = ExtResource("1_44ofg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_oj2u1")
+
+[node name="PeasantBody" type="CharacterBody2D" parent="."]
+script = ExtResource("3_m2in2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PeasantBody"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_xi3sq")
+
+[node name="HitNoise" type="AudioStreamPlayer" parent="PeasantBody"]
+stream = ExtResource("4_mewu5")
+volume_db = -10.0
+
+[connection signal="finished" from="PeasantBody/HitNoise" to="PeasantBody" method="_on_hit_noise_finished"]

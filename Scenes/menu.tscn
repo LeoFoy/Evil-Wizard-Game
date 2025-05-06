@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdpkvgduxaxsj"]
+
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_6cis3"]
+[ext_resource type="Texture2D" uid="uid://bqtb4fec5r4ac" path="res://User Interface/Title.png" id="2_bj465"]
+[ext_resource type="Texture2D" uid="uid://dq7g6w4dc88dh" path="res://User Interface/LevelSelect Button.png" id="3_6rx4c"]
+[ext_resource type="Texture2D" uid="uid://ccuw870xveqhn" path="res://User Interface/Quit Button.png" id="4_kxi40"]
+[ext_resource type="AudioStream" uid="uid://b288qjs6tcgw5" path="res://SFX/Select.wav" id="5_l3g8o"]
+[ext_resource type="AudioStream" uid="uid://bicupmj3cpciw" path="res://SFX/Track 41.wav" id="6_3h707"]
+[ext_resource type="Script" path="res://Scenes/credit.gd" id="7_j5jbc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6cis3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.250617, 0.1595, 0.55, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 384.0
+grow_horizontal = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
+position = Vector2(616, 184)
+scale = Vector2(0.466667, 0.466667)
+texture = ExtResource("2_bj465")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -288.0
+offset_right = 112.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LevelSelect_Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/LevelSelect_Button"]
+position = Vector2(112, 64)
+scale = Vector2(0.414557, 0.414557)
+texture = ExtResource("3_6rx4c")
+
+[node name="SelectSound1" type="AudioStreamPlayer" parent="VBoxContainer/LevelSelect_Button"]
+stream = ExtResource("5_l3g8o")
+volume_db = -12.0
+pitch_scale = 0.8
+
+[node name="Quit_Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Quit_Button"]
+position = Vector2(112, 66)
+scale = Vector2(0.414557, 0.414557)
+texture = ExtResource("4_kxi40")
+
+[node name="SelectSound2" type="AudioStreamPlayer" parent="VBoxContainer/Quit_Button"]
+stream = ExtResource("5_l3g8o")
+volume_db = -12.0
+pitch_scale = 0.5
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3h707")
+volume_db = -10.0
+
+[node name="Credit" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 584.0
+offset_right = 1152.0
+offset_bottom = 615.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[url=https://archive.org/details/free-chiptune-collection-for-game-usage] All Music by u/CallRoll [/url] (click link)"
+script = ExtResource("7_j5jbc")
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 616.0
+offset_right = 1144.0
+offset_bottom = 640.0
+text = "v0.5.2 (Early Access)"
+
+[connection signal="pressed" from="VBoxContainer/LevelSelect_Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="VBoxContainer/LevelSelect_Button/SelectSound1" to="." method="_on_select_sound_finished"]
+[connection signal="pressed" from="VBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="finished" from="VBoxContainer/Quit_Button/SelectSound2" to="." method="_on_select_sound_2_finished"]
+[connection signal="meta_clicked" from="Credit" to="Credit" method="_on_meta_clicked"]

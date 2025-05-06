@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xciox06u7yjv"]
+
+[ext_resource type="Texture2D" uid="uid://j158b2ti85ap" path="res://Sprites/EvilWizard1.png" id="1_hwxm7"]
+[ext_resource type="Texture2D" uid="uid://ptr3y1xi3cju" path="res://User Interface/DoomTower.png" id="2_uu6rq"]
+[ext_resource type="Texture2D" uid="uid://c0jjsww28poxb" path="res://User Interface/SpellTrayNewColors.png" id="3_npdkk"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Wizard" type="Sprite2D" parent="."]
+position = Vector2(95, 255)
+scale = Vector2(0.847656, 0.847656)
+texture = ExtResource("1_hwxm7")
+
+[node name="DoomTower" type="Sprite2D" parent="."]
+position = Vector2(95, 393)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_uu6rq")
+
+[node name="SpellTray" type="Sprite2D" parent="."]
+position = Vector2(288, 616)
+texture = ExtResource("3_npdkk")

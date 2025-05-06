@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dll3bsn2py3we"]
+
+[ext_resource type="Script" path="res://Heroes/knight.gd" id="1_q3wtm"]
+[ext_resource type="Texture2D" uid="uid://b0xa82614c13v" path="res://Sprites/Knight2.png" id="2_7ntkv"]
+[ext_resource type="Script" path="res://Heroes/knight_body.gd" id="3_hjnw1"]
+[ext_resource type="AudioStream" uid="uid://bhbkbhd5k17xf" path="res://SFX/hitHurt.wav" id="4_vqjvk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xi3sq"]
+size = Vector2(45, 48)
+
+[node name="knight" type="PathFollow2D"]
+rotates = false
+loop = false
+script = ExtResource("1_q3wtm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_7ntkv")
+
+[node name="KnightBody" type="CharacterBody2D" parent="."]
+script = ExtResource("3_hjnw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KnightBody"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_xi3sq")
+
+[node name="HitNoise" type="AudioStreamPlayer" parent="KnightBody"]
+stream = ExtResource("4_vqjvk")
+volume_db = -10.0
+
+[connection signal="finished" from="KnightBody/HitNoise" to="KnightBody" method="_on_hit_noise_finished"]
