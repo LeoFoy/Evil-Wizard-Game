@@ -15,7 +15,7 @@ func _input(event):
 	if following_mouse and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 		if is_valid_placement():
 			following_mouse = false
-			Globals.souls -= 10
+			Globals.souls -= 125
 			var pos: Vector2 = get_tree().current_scene.get_node("SpellCast").global_position
 			var direction: Vector2 = (self.global_position - pos).normalized()
 			shootFireball.emit(pos, direction)

@@ -39,7 +39,7 @@ func _input(event):
 			queue_redraw()
 			
 			following_mouse = false
-			Globals.souls -= 1
+			Globals.souls -= 100
 			print(Globals.souls)
 			#set_process(false)
 		else:

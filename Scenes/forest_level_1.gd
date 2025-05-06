@@ -14,7 +14,7 @@ var level_failed := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Globals.souls = 2
+	Globals.souls = 600
 	Globals.tower_health = 100
 
 
@@ -26,12 +26,12 @@ func _process(delta: float) -> void:
 	$SoulCounter.text = "Souls: " + str(Globals.souls)
 	$HealthCounter.text = "Tower Integrity: " + str(Globals.tower_health)
 	
-	if Globals.souls < 1:
+	if Globals.souls < 100:
 		$SkeletonButton.disabled = true
 	else:
 		$SkeletonButton.disabled = false
 	
-	if Globals.souls < 10:
+	if Globals.souls < 125:
 		$FireballButton.disabled = true
 	else:
 		$FireballButton.disabled = false
