@@ -19,6 +19,8 @@
 
 -----Game Systems---------
 - "Souls" are the currency used for casting spells and summoning minions
+	- skeletons cost 1oo souls
+	- fireballs cost 125 souls
 - when a wave is completed, start the next wave with the "Start wave" button
 - Once all waves are completed, you will be booted to the level select and able to select another map to complete
 - upon failure to protect your tower, the wizard will cast a time reversal spell, sending you back to the level select screen to play the level again or try another one
