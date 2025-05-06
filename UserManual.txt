@@ -3,12 +3,6 @@
 - Make sure all files stay together in one folder.
 - Double click the .exe file to start the game.
 
------Game Systems---------
-- "Souls" are the currency used for casting spells and summoning minions
-- when a wave is completed, start the next wave with the "Start wave" button
-- Once all waves are completed, you will be booted to the level select and able to select another map to complete
-- upon failure to protect your tower, the wizard will cast a time reversal spell, sending you back to the level select screen to play the level again or try another one
-
 -----Playing the Game---------
 - Upon opening the .exe, the game will start
 - You will be presented with a main menu
@@ -22,4 +16,10 @@
 	- spells can be cast from the bottom left bar
 - to start the wave of enemies, click "Start Wave"
 - to pause the game at anytime (to think) toggle the "Pause button", click it again to unpause
+
+-----Game Systems---------
+- "Souls" are the currency used for casting spells and summoning minions
+- when a wave is completed, start the next wave with the "Start wave" button
+- Once all waves are completed, you will be booted to the level select and able to select another map to complete
+- upon failure to protect your tower, the wizard will cast a time reversal spell, sending you back to the level select screen to play the level again or try another one
 
