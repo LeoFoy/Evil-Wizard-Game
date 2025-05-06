@@ -1,6 +1,6 @@
 extends Node
 
-var souls = 2
+var souls = 600
 
 var tower_health = 100
 

@@ -16,6 +16,8 @@ var level_failed := false
 func _ready() -> void:
 	Globals.souls = 2
 	Globals.tower_health = 100
+	
+	$ButtonMenu.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,6 +60,7 @@ func check_failure():
 		level_failed = true
 		$WaveNotif.modulate.a = 1.0
 		$WaveNotif.text = "You have failed..."
+		$Dialogue.text = "Fuck. I cast Time Reversal!"
 		$FailTimer.start()
 
 func wave_completed():
@@ -158,3 +161,14 @@ func _on_fail_timer_timeout() -> void:
 	print("timer ended")
 	var level_select = load("res://Scenes/Level_Selection.tscn") as PackedScene
 	get_tree().change_scene_to_packed(level_select)
+
+
+func _on_button_mouse_entered() -> void:
+	#makes button menu visible
+	$ButtonMenu.visible = true
+	pass # Replace with function body.
+
+func _on_button_mouse_exited() -> void:
+	#makes button menu not-visible
+	$ButtonMenu.visible = false
+	pass # Replace with function body.

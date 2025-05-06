@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://dfmitne88stri"]
+[gd_scene load_steps=23 format=4 uid="uid://dfmitne88stri"]
 
 [ext_resource type="Script" path="res://Scenes/plains_level_1.gd" id="1_bk2k8"]
 [ext_resource type="Texture2D" uid="uid://d0rlppxhpyas1" path="res://TileSets/Grass_Tileset_revised.png" id="1_vq88q"]
 [ext_resource type="Texture2D" uid="uid://csehp5ho4yweg" path="res://TileSets/StonePath_Tilese_fixedt.png" id="2_gyttf"]
 [ext_resource type="PackedScene" uid="uid://xciox06u7yjv" path="res://Wizard/player.tscn" id="3_creyy"]
 [ext_resource type="Texture2D" uid="uid://tqdibdq7q0vu" path="res://User Interface/MinionTrayNewColors.png" id="5_5bfd4"]
+[ext_resource type="PackedScene" uid="uid://c0vpk38frq6w1" path="res://User Interface/button_menu.tscn" id="6_ksu6u"]
 [ext_resource type="Texture2D" uid="uid://clrxo3gu4a2ug" path="res://Sprites/Skeleton1.png" id="6_y6x4s"]
 [ext_resource type="Texture2D" uid="uid://wf3apd3da6yc" path="res://User Interface/StartWaveButton.png" id="8_3xi64"]
 [ext_resource type="Texture2D" uid="uid://bleusyapoiyo1" path="res://Sprites/Fireball_spell.png" id="8_6x0k0"]
@@ -63,6 +64,10 @@ font_size = 50
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_wa6fs"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [node name="PlainsLevel1" type="Node2D"]
 script = ExtResource("1_bk2k8")
 
@@ -84,6 +89,12 @@ polygon = PackedVector2Array(520, 0, 568, 0, 568, 136, 760, 136, 760, 312, 440, 
 position = Vector2(1046.5, 351.667)
 scale = Vector2(1.09896, 1.09896)
 texture = ExtResource("5_5bfd4")
+
+[node name="ButtonMenu" parent="." instance=ExtResource("6_ksu6u")]
+offset_left = 960.0
+offset_top = 88.0
+offset_right = 960.0
+offset_bottom = 88.0
 
 [node name="Button" type="Button" parent="."]
 offset_left = 960.0
@@ -196,8 +207,18 @@ horizontal_alignment = 1
 stream = ExtResource("8_meu0f")
 
 [node name="FailTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Dialogue" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 205.0
+offset_right = 326.0
+offset_bottom = 228.0
+label_settings = SubResource("LabelSettings_wa6fs")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="button_down" from="FireballButton" to="." method="_on_fireball_button_button_down"]
 [connection signal="pressed" from="StartWave" to="." method="_on_start_wave_pressed"]
 [connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
