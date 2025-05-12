@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=4 uid="uid://3n6s22f1p607"]
 
-[ext_resource type="Script" path="res://Scenes/tundra_level_1.gd" id="1_0lkhj"]
+[ext_resource type="Script" uid="uid://db06al6lct24t" path="res://Scenes/tundra_level_1.gd" id="1_0lkhj"]
 [ext_resource type="Texture2D" uid="uid://4iv3p7lbwaal" path="res://TileSets/TundraTileSet.png" id="1_kjinw"]
 [ext_resource type="Texture2D" uid="uid://b1uirvdxostxc" path="res://TileSets/StonePath_Tileset_tundra.png" id="2_ai1hg"]
 [ext_resource type="PackedScene" uid="uid://xciox06u7yjv" path="res://Wizard/player.tscn" id="3_i1i6r"]

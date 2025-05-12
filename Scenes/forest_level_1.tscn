@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=4 uid="uid://7hrpnsgo0ny5"]
 
 [ext_resource type="Texture2D" uid="uid://dht4f15dj0m8h" path="res://TileSets/StonePath_Tileset_forest.png" id="1_3xauo"]
-[ext_resource type="Script" path="res://Scenes/forest_level_1.gd" id="1_hkv8a"]
+[ext_resource type="Script" uid="uid://ccymbott8er71" path="res://Scenes/forest_level_1.gd" id="1_hkv8a"]
 [ext_resource type="PackedScene" uid="uid://xciox06u7yjv" path="res://Wizard/player.tscn" id="1_loej5"]
 [ext_resource type="Texture2D" uid="uid://iacdy6yqn0ee" path="res://TileSets/ForestTileSet.png" id="2_dwanl"]
 [ext_resource type="Texture2D" uid="uid://tqdibdq7q0vu" path="res://User Interface/MinionTrayNewColors.png" id="2_ok6jw"]

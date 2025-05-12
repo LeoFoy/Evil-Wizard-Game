@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=3 uid="uid://dpi0bgr2e6r8g"]
 
-[ext_resource type="Script" path="res://Scenes/level_selection.gd" id="1_ud2pq"]
+[ext_resource type="Script" uid="uid://decy0h7hcc5jc" path="res://Scenes/level_selection.gd" id="1_ud2pq"]
 [ext_resource type="Texture2D" uid="uid://6fikuhyilwk2" path="res://User Interface/NoneDoomed.png" id="2_8t2bo"]
 [ext_resource type="AudioStream" uid="uid://rajsm2mbdjp8" path="res://SFX/LevelEnter.wav" id="3_fn5yy"]
 [ext_resource type="AudioStream" uid="uid://r2dftvkqs0rg" path="res://SFX/Track 47.wav" id="4_74a0c"]

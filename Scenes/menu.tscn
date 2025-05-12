@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cdpkvgduxaxsj"]
 
-[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_6cis3"]
+[ext_resource type="Script" uid="uid://c1lsqrdsr7cvm" path="res://Scenes/menu.gd" id="1_6cis3"]
 [ext_resource type="Texture2D" uid="uid://bqtb4fec5r4ac" path="res://User Interface/Title.png" id="2_bj465"]
 [ext_resource type="Texture2D" uid="uid://dq7g6w4dc88dh" path="res://User Interface/LevelSelect Button.png" id="3_6rx4c"]
 [ext_resource type="Texture2D" uid="uid://ccuw870xveqhn" path="res://User Interface/Quit Button.png" id="4_kxi40"]
 [ext_resource type="AudioStream" uid="uid://b288qjs6tcgw5" path="res://SFX/Select.wav" id="5_l3g8o"]
 [ext_resource type="AudioStream" uid="uid://bicupmj3cpciw" path="res://SFX/Track 41.wav" id="6_3h707"]
-[ext_resource type="Script" path="res://Scenes/credit.gd" id="7_j5jbc"]
+[ext_resource type="Script" uid="uid://cvr0uxhn2o3p5" path="res://Scenes/credit.gd" id="7_j5jbc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

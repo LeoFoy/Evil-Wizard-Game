@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnkucjm1f8n1e"]
 
-[ext_resource type="Script" path="res://MinionTowers/Skeleton/skeleton_flame.gd" id="1_5j4tr"]
+[ext_resource type="Script" uid="uid://cp68kibgxecfx" path="res://MinionTowers/Skeleton/skeleton_flame.gd" id="1_5j4tr"]
 [ext_resource type="Texture2D" uid="uid://dppen184mayry" path="res://Sprites/Skeleton fire.png" id="1_f6pbs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xbej0"]

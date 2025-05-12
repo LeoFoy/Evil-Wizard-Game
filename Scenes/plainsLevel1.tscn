@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=4 uid="uid://dfmitne88stri"]
 
-[ext_resource type="Script" path="res://Scenes/plains_level_1.gd" id="1_bk2k8"]
+[ext_resource type="Script" uid="uid://d2s40s8u0mv3q" path="res://Scenes/plains_level_1.gd" id="1_bk2k8"]
 [ext_resource type="Texture2D" uid="uid://d0rlppxhpyas1" path="res://TileSets/Grass_Tileset_revised.png" id="1_vq88q"]
 [ext_resource type="Texture2D" uid="uid://csehp5ho4yweg" path="res://TileSets/StonePath_Tilese_fixedt.png" id="2_gyttf"]
 [ext_resource type="PackedScene" uid="uid://xciox06u7yjv" path="res://Wizard/player.tscn" id="3_creyy"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://5jo2jfdu48k6"]
 
-[ext_resource type="Script" path="res://Wizard/Spells/fire_ring.gd" id="1_cjrhf"]
+[ext_resource type="Script" uid="uid://b6ywrvkfcfabp" path="res://Wizard/Spells/fire_ring.gd" id="1_cjrhf"]
 [ext_resource type="Texture2D" uid="uid://o0xokujfju3t" path="res://Sprites/FireRingSprite.png" id="2_kd2ka"]
-[ext_resource type="Script" path="res://Wizard/Spells/fire_ring_collision.gd" id="3_q7ls7"]
+[ext_resource type="Script" uid="uid://bdtlj02iaylyx" path="res://Wizard/Spells/fire_ring_collision.gd" id="3_q7ls7"]
 [ext_resource type="AudioStream" uid="uid://bonnowaicjahd" path="res://SFX/fireball.wav" id="4_lym84"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbwss"]

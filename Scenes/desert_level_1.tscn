@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=4 uid="uid://cnixn6ejaduan"]
 
 [ext_resource type="Texture2D" uid="uid://d1epn7g1s0ucf" path="res://TileSets/DesertTileSet.png" id="1_73l0m"]
-[ext_resource type="Script" path="res://Scenes/desert_level_1.gd" id="1_lm6ba"]
+[ext_resource type="Script" uid="uid://dadc27mjprokc" path="res://Scenes/desert_level_1.gd" id="1_lm6ba"]
 [ext_resource type="Texture2D" uid="uid://cdpw0d7ful0vt" path="res://TileSets/StonePath_Tileset_desert.png" id="2_n8o6k"]
 [ext_resource type="PackedScene" uid="uid://xciox06u7yjv" path="res://Wizard/player.tscn" id="3_1pmrs"]
 [ext_resource type="Texture2D" uid="uid://tqdibdq7q0vu" path="res://User Interface/MinionTrayNewColors.png" id="4_nlacv"]

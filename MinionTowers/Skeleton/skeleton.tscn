@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dv3mr75vdd7p7"]
 
-[ext_resource type="Script" path="res://MinionTowers/Skeleton/skeleton.gd" id="1_1b3jq"]
+[ext_resource type="Script" uid="uid://n35eyka6ab5a" path="res://MinionTowers/Skeleton/skeleton.gd" id="1_1b3jq"]
 [ext_resource type="Texture2D" uid="uid://clrxo3gu4a2ug" path="res://Sprites/Skeleton1.png" id="2_w2jt6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cyon6"]

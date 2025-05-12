@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bvcngmxolmoj6"]
 
-[ext_resource type="Script" path="res://Heroes/peasant.gd" id="1_44ofg"]
+[ext_resource type="Script" uid="uid://b5x6dpnhffcjh" path="res://Heroes/peasant.gd" id="1_44ofg"]
 [ext_resource type="Texture2D" uid="uid://bj84w4vgy0wgl" path="res://Sprites/Peasant.png" id="2_oj2u1"]
-[ext_resource type="Script" path="res://Heroes/peasant_body.gd" id="3_m2in2"]
+[ext_resource type="Script" uid="uid://4xx3smaguclb" path="res://Heroes/peasant_body.gd" id="3_m2in2"]
 [ext_resource type="AudioStream" uid="uid://bhbkbhd5k17xf" path="res://SFX/hitHurt.wav" id="4_mewu5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi3sq"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dll3bsn2py3we"]
 
-[ext_resource type="Script" path="res://Heroes/knight.gd" id="1_q3wtm"]
+[ext_resource type="Script" uid="uid://cylai8731p121" path="res://Heroes/knight.gd" id="1_q3wtm"]
 [ext_resource type="Texture2D" uid="uid://b0xa82614c13v" path="res://Sprites/Knight2.png" id="2_7ntkv"]
-[ext_resource type="Script" path="res://Heroes/knight_body.gd" id="3_hjnw1"]
+[ext_resource type="Script" uid="uid://bsfyd7dgtcgtd" path="res://Heroes/knight_body.gd" id="3_hjnw1"]
 [ext_resource type="AudioStream" uid="uid://bhbkbhd5k17xf" path="res://SFX/hitHurt.wav" id="4_vqjvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi3sq"]
