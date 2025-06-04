@@ -103,7 +103,6 @@ offset_left = 984.0
 offset_top = 616.0
 offset_right = 1144.0
 offset_bottom = 640.0
-text = "v0.5.2 (Early Access)"
 
 [connection signal="pressed" from="VBoxContainer/LevelSelect_Button" to="." method="_on_button_pressed"]
 [connection signal="finished" from="VBoxContainer/LevelSelect_Button/SelectSound1" to="." method="_on_select_sound_finished"]
